@@ -5,7 +5,7 @@ A modern, responsive conference website built with SvelteKit and Bootstrap, feat
 ## Features
 
 ### 1. Dynamic Content
-- Interactive countdown timer to event date
+- countdown timer to event date
 - Dynamic speaker profiles and session schedules
 - Flexible sponsorship tier management
 - Responsive design for all screen sizes
