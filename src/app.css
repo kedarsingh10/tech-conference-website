@@ -1,0 +1,41 @@
+[data-bs-theme="dark"] .modern-btn {
+    border-color: #fff;
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .modern-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+:global([data-bs-theme="dark"]) {
+    --bs-body-color: #e9ecef;
+    --bs-body-bg: #212529;
+    --bs-secondary-color: #adb5bd;
+}
+
+
+:global([data-bs-theme="dark"]) .modern-btn {
+    border-color: #fff;
+    color: #fff;
+}
+
+:global([data-bs-theme="dark"]) .modern-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+:global([data-bs-theme="dark"]) .countdown-number {
+    color: #fff;
+}
+
+:global([data-bs-theme="dark"]) .hero-section {
+    background: linear-gradient(to bottom, var(--bs-dark), var(--bs-body-bg));
+}
+
+:global([data-bs-theme="dark"]) .session-card,
+:global([data-bs-theme="dark"]) .speaker-card,
+:global([data-bs-theme="dark"]) .highlight-card {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-border-color);
+}
