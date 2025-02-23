@@ -3,7 +3,7 @@
     import Speakers from '$lib/components/Speakers.svelte';
     import { onMount } from 'svelte';
 
-    const eventDate = new Date('2025-02-29T09:00:00');
+    const eventDate = new Date('2025-03-01T09:00:00');
     
     let days = 0;
     let hours = 0;
@@ -110,7 +110,6 @@
         font-size: 3rem;
         font-weight: 700;
         line-height: 1;
-        color: #000;
     }
 
     .countdown-label {

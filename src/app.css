@@ -1,41 +1,113 @@
-[data-bs-theme="dark"] .modern-btn {
-    border-color: #fff;
-    color: #fff;
-}
-
-[data-bs-theme="dark"] .modern-btn:hover {
-    background: #fff;
-    color: #000;
-}
-
+/* Theme Variables */
 :global([data-bs-theme="dark"]) {
     --bs-body-color: #e9ecef;
     --bs-body-bg: #212529;
     --bs-secondary-color: #adb5bd;
 }
 
+/* Button Styles */
+:global(.modern-btn) {
+    border: 2px solid var(--bs-border-color);
+    background: transparent;
+    color: var(--bs-body-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
 
+:global(.modern-btn:hover) {
+    background: var(--bs-body-color);
+    color: var(--bs-body-bg);
+    transform: translateY(-2px);
+}
+
+/* Dark theme button overrides */
 :global([data-bs-theme="dark"]) .modern-btn {
-    border-color: #fff;
-    color: #fff;
+    border-color: var(--bs-body-color);
+    color: var(--bs-body-color);
 }
 
 :global([data-bs-theme="dark"]) .modern-btn:hover {
-    background: #fff;
-    color: #000;
+    background: var(--bs-body-color);
+    color: var(--bs-body-bg);
+}
+
+/* Card Components */
+:global(.speaker-card),
+:global(.session-card),
+:global(.sponsor-card),
+:global(.highlight-card),
+:global(.sponsor-tier-card) {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid var(--bs-border-color);
+}
+
+:global(.speaker-card:hover),
+:global(.session-card:hover),
+:global(.sponsor-card:hover),
+:global(.highlight-card:hover) {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles */
+:global(.hero-section),
+:global(.mission-section) {
+    background: linear-gradient(135deg, 
+        var(--bs-body-bg) 0%,
+        var(--bs-secondary-bg) 100%
+    );
+}
+
+/* Toast Styles */
+:global(.toast) {
+    border: 1px solid var(--bs-border-color);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+/* Dark theme toast overrides */
+:global([data-bs-theme="dark"]) .toast {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-border-color);
+}
+
+:global(.toast-header) {
+    background-color: var(--bs-body-bg);
+    border-bottom: 1px solid var(--bs-border-color);
+}
+
+:global([data-bs-theme="dark"]) .toast-header {
+    background-color: var(--bs-dark);
+    color: var(--bs-body-color);
+}
+
+:global(.toast-body) {
+    background-color: var(--bs-body-bg);
+}
+
+:global([data-bs-theme="dark"]) .toast-body {
+    background-color: var(--bs-dark);
+    color: var(--bs-body-color);
+}
+
+/* Badge Component */
+:global(.badge) {
+    font-size: 0.8rem;
+    padding: 0.5em 1em;
+}
+
+/* Dark Theme Overrides */
+:global([data-bs-theme="dark"]) .session-card,
+:global([data-bs-theme="dark"]) .speaker-card,
+:global([data-bs-theme="dark"]) .highlight-card,
+:global([data-bs-theme="dark"]) .sponsor-card {
+    background-color: var(--bs-dark);
+    border-color: var(--bs-border-color);
 }
 
 :global([data-bs-theme="dark"]) .countdown-number {
     color: #fff;
-}
-
-:global([data-bs-theme="dark"]) .hero-section {
-    background: linear-gradient(to bottom, var(--bs-dark), var(--bs-body-bg));
-}
-
-:global([data-bs-theme="dark"]) .session-card,
-:global([data-bs-theme="dark"]) .speaker-card,
-:global([data-bs-theme="dark"]) .highlight-card {
-    background-color: var(--bs-dark);
-    border-color: var(--bs-border-color);
 }

@@ -68,7 +68,7 @@
 </Container>
 
 <div class="toast-container position-fixed bottom-0 end-0 p-3">
-	<Toast isOpen={showSuccessToast} autohide={true} delay={3000} on:close={() => (showSuccessToast = false)} class="bg-white">
+	<Toast isOpen={showSuccessToast} autohide={true} delay={3000} on:close={() => (showSuccessToast = false)}>
 		<ToastHeader icon="success" class="bg-success text-white">
 			Success
 		</ToastHeader>
@@ -77,7 +77,7 @@
 		</ToastBody>
 	</Toast>
 
-	<Toast isOpen={showErrorToast} autohide={true} delay={3000} on:close={() => (showErrorToast = false)} class="bg-white">
+	<Toast isOpen={showErrorToast} autohide={true} delay={3000} on:close={() => (showErrorToast = false)}>
 		<ToastHeader icon="danger" class="bg-danger text-white">
 			Error
 		</ToastHeader>
@@ -94,5 +94,16 @@
 	:global(.toast) {
 		border: 1px solid var(--bs-border-color);
 		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+		background-color: var(--bs-body-bg) !important;
+		color: var(--bs-body-color);
+	}
+
+	:global([data-bs-theme="dark"]) .toast {
+		background-color: var(--bs-dark) !important;
+	}
+
+	:global(.toast-body) {
+		background-color: inherit;
+		color: var(--bs-body-color);
 	}
 </style>

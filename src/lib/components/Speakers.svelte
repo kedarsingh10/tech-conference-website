@@ -94,5 +94,22 @@
 		margin-top: auto;
 	}
 
-	
+	:global(.speaker-card),
+	:global(.session-card),
+	:global(.sponsor-card),
+	:global(.highlight-card),
+	:global(.sponsor-tier-card) {
+		transition:
+			transform 0.2s ease-in-out,
+			box-shadow 0.2s ease-in-out;
+		border: 1px solid var(--bs-border-color);
+	}
+
+	:global(.speaker-card:hover),
+	:global(.session-card:hover),
+	:global(.sponsor-card:hover),
+	:global(.highlight-card:hover) {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+	}
 </style>
